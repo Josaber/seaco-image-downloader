@@ -1,0 +1,13 @@
+trailingComma: es5
+useTabs: false
+tabWidth: 2
+semi: false
+singleQuote: true
+quoteProps: as-needed
+bracketSpacing: true
+arrowParens: avoid
+insertPragma: false
+proseWrap: preserve
+htmlWhitespaceSensitivity: css
+endOfLine: lf
+printWidth: 120

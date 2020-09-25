@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>[SEACO] Image Downloader - Options</title>
+
+    <link rel="stylesheet" href="/views/main.css" type="text/css" />
+    <style>
+      body {
+        min-width: 380px;
+        max-width: 640px;
+        padding: 2px;
+      }
+
+      fieldset label {
+        display: block;
+      }
+
+      select,
+      input[type='color'],
+      input[type='number'] {
+        width: 80px;
+        text-align: right;
+      }
+
+      input[type='button'] {
+        cursor: pointer;
+        min-width: 80px;
+        height: 26px;
+        border: 0;
+        margin: 6px 2px 0;
+        color: #fff;
+      }
+    </style>
+
+    <script src="/scripts/zepto.js"></script>
+    <script src="/scripts/options.js"></script>
+  </head>
+
+  <body>
+    <h2>[SEACO] Image Downloader</h2>
+
+    <fieldset>
+      <legend>About</legend>
+      <p>
+        This extension is and always will be free, open-source, and without ads or tracking. The source code can be
+        found on GitHub:
+        <a href="https://github.com/Josaber/seaco-image-downloader" target="_blank">seaco-image-downloader</a>.
+        <br />
+        Based on the Google Chrome Extension sample
+        <a href="https://developer.chrome.com/extensions/examples/api/downloads/download_links.zip" target="_blank"
+          >Download Selected Links</a
+        >.
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Settings</legend>
+      <table>
+        <tr title="Save to subdirectory">
+          <td><label for="save_to_subdirectory">Sub directory name:</label></td>
+          <td>
+            <input type="text" id="save_to_subdirectory" required />
+          </td>
+        </tr>
+
+        <tr title="Filter by image URL; supports wildcard and regex">
+          <td><label for="url_filter_pattern">Image URL filter:</label></td>
+          <td>
+            <input type="text" id="url_filter_pattern" required />
+          </td>
+        </tr>
+
+        <tr title="Filter by CSS selector">
+          <td><label for="css_selector_filter_pattern">Image CSS selector filter:</label></td>
+          <td>
+            <input type="text" id="css_selector_filter_pattern" required />
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <div id="buttons">
+      <input type="button" id="save_button" class="accent" value="SAVE" title="Save the current settings" />
+      <input type="button" id="reset_button" class="warning" value="RESET" title="Reset all settings to default" />
+      <input type="button" id="clear_data_button" class="danger right" value="CLEAR DATA" title="Clear all data" />
+    </div>
+
+    <div id="notifications"></div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "[SEACO] Image Downloader",
+  "version": "1.0.0",
+  "description": "Download images from website.",
+  "author": "SEACO",
+  "minimum_chrome_version": "31",
+  "homepage_url": "https://github.com/Josaber/seaco-image-downloader",
+  "incognito": "split",
+  "browser_action": {
+    "default_icon": "assets/icon48.png",
+    "default_title": "Image Downloader",
+    "default_popup": "views/popup.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+D"
+      }
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "background": {
+    "scripts": ["scripts/defaults.js"],
+    "persistent": false
+  },
+  "permissions": ["activeTab", "tabs", "downloads", "<all_urls>"],
+  "options_page": "views/options.html",
+  "options_ui": {
+    "page": "views/options.html"
+  }
+}
